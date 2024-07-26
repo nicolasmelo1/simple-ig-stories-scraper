@@ -1,5 +1,7 @@
 import puppeteer, { Page } from "puppeteer";
 import { sleep } from "./utils";
+import { randomUUID } from 'node:crypto';
+import fs from 'fs';
 
 const INSTAGRAM_HOST = "https://www.instagram.com/";
 const TOTAL_NUMBER_OF_STORIES_PER_RUN = 2;
@@ -94,9 +96,10 @@ export default async function instagram(
     }
   }
 
-  async function extractStories() {
-    const extractedStories = new Set();
-    const alreadyViewedStories = new Set();
+  async function extractStories(existingData: string[] = []) {
+    const oldExtractedStories = new Set<string>(...existingData);
+    const extractedStories = new Set<string>();
+    const alreadyViewedStories = new Set<string>();
     const page = await browser.newPage();
     await page.goto(INSTAGRAM_HOST);
     await page.waitForNetworkIdle();
@@ -137,29 +140,43 @@ export default async function instagram(
 
     while (extractedStories.size < TOTAL_NUMBER_OF_STORIES_PER_RUN && button) {
       const extractedStoryOnButton = new Set();
-      let resolve: (value: any) => void = () => undefined
+      const storyUuid = randomUUID();
+      /*let resolve: (value: any) => void = () => undefined
       const promise = new Promise((r) => (resolve = r));
       page.on('request', (request) => {
         const url = new URL(request.url());
         const isStoryContent = url.hostname.startsWith('instagram') && url.hostname.endsWith('fna.fbcdn.net') && url.searchParams.size > 10;
         if (!isStoryContent) return;
-        if (url.searchParams.has('_nc_sid', 'f657c9') === false) return;
         if (extractedStories.has(url.toString())) return;
+        if (oldExtractedStories.has(url.toString())) return;
         if (extractedStoryOnButton.size >= 1) return resolve(undefined);
         extractedStoryOnButton.add(url.toString());
         console.log('Story content URL:', request.url());
-      });
+      });*/
       try {
         await button?.click(); 
       } catch (e) {
         console.error('Could not click on the button', e);
       }
-      setTimeout(resolve, 5000);
-      await promise;
+      //setTimeout(resolve, 5000);
+      await sleep(1500);
+      fs.existsSync('./stories') || fs.mkdirSync('./stories');
+      await page.screenshot({
+        path: `./stories/${storyUuid}.jpg`,
+        clip: {
+          height: 900,
+          width: 500,
+          y: 0,
+          x: 200,
+        }
+      });
+      //await promise;
 
-      extractedStories.add((Array.from(extractedStoryOnButton)[0]));
+      extractedStories.add(storyUuid);
+      //console.log("Extracted story", Array.from(extractedStoryOnButton)[0]);
+      //extractedStories.add(Array.from(extractedStoryOnButton)[0] as string);
+
       const toCloseButtons = await page.$$("svg");
-
       for (const toCloseButton of toCloseButtons) {
         const valueOfToCloseButton = await page.evaluate(
           (toCloseButton) => toCloseButton.ariaLabel,
@@ -167,6 +184,7 @@ export default async function instagram(
         );
         
         if (valueOfToCloseButton === "Close") {
+          await sleep(2000);
           console.log("Found the close button", valueOfToCloseButton);
           await page.screenshot({
             path: 'closing_the_button.jpg'
@@ -181,8 +199,8 @@ export default async function instagram(
 
       button = await getStoriesButtons();
     }
-
-    return Array.from(extractedStories);
+    await page.close();
+    return Array.from(extractedStories).filter((story) => typeof story === 'string');
   }
 
   async function close() {

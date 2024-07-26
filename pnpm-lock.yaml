@@ -11,6 +11,15 @@ importers:
       express:
         specifier: ^4.19.2
         version: 4.19.2
+      oci-common:
+        specifier: ^2.89.4
+        version: 2.89.4
+      oci-objectstorage:
+        specifier: ^2.89.4
+        version: 2.89.4
+      oci-sdk:
+        specifier: ^2.89.4
+        version: 2.89.4
       puppeteer:
         specifier: ^22.6.3
         version: 22.14.0(typescript@5.5.4)
@@ -328,6 +337,15 @@ packages:
   '@types/http-errors@2.0.4':
     resolution: {integrity: sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==}
 
+  '@types/isomorphic-fetch@0.0.35':
+    resolution: {integrity: sha512-DaZNUvLDCAnCTjgwxgiL1eQdxIKEpNLOlTNtAgnZc50bG2copGhRrFN9/PxPBuJe+tZVLCbQ7ls0xveXVRPkvw==}
+
+  '@types/jsonwebtoken@9.0.0':
+    resolution: {integrity: sha512-mM4TkDpA9oixqg1Fv2vVpOFyIVLJjm5x4k0V+K/rEsizfjD7Tk7LKk3GTtbB7KCfP0FEHQtsZqFxYA0+sijNVg==}
+
+  '@types/jssha@2.0.0':
+    resolution: {integrity: sha512-oBnY3csYnXfqZXDRBJwP1nDDJCW/+VMJ88UHT4DCy0deSXpJIQvMCwYlnmdW4M+u7PiSfQc44LmiFcUbJ8hLEw==}
+
   '@types/keyv@3.1.4':
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
 
@@ -336,6 +354,9 @@ packages:
 
   '@types/node@20.14.12':
     resolution: {integrity: sha512-r7wNXakLeSsGT0H1AU863vS2wa5wBOK4bWMjZz2wj+8nBx+m5PeIn0k8AloSLpRuiwdRQZwarZqHE4FNArPuJQ==}
+
+  '@types/opossum@4.1.1':
+    resolution: {integrity: sha512-9TMnd8AWRVtnZMqBbbzceQoJdafErgUViogFaQ3eetsbeLtiFFZ695mepNaLtlfJi4uRP3GmHfe3CJ2DZKaxYA==}
 
   '@types/qs@6.9.15':
     resolution: {integrity: sha512-uXHQKES6DQKKCLh441Xv/dwxOq1TVS3JPUMlEqoEglvlhR6Mxnlew/Xq/LRVHpLyk7iK3zODe1qYHIMltO7XGg==}
@@ -351,6 +372,9 @@ packages:
 
   '@types/serve-static@1.15.7':
     resolution: {integrity: sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw==}
+
+  '@types/sshpk@1.10.3':
+    resolution: {integrity: sha512-cru1waDhHZnZuB18E6Dgf2UXf8U93mdOEDcKYe5jTri+fpucidSs7DLmGICpLxN+95aYkwtgeyny9fBFzQVdmA==}
 
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
@@ -384,9 +408,19 @@ packages:
   array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
 
+  asn1@0.2.6:
+    resolution: {integrity: sha512-ix/FxPn0MDjeyJ7i/yoHGFt/EX6LyNbxSEhPPXODPL+KB0VPk86UYfL0lMdy+KCnv+fmvIzySwaK5COwqVbWTQ==}
+
+  assert-plus@1.0.0:
+    resolution: {integrity: sha512-NfJ4UzBCcQGLDlQq7nHxH+tv3kyZ0hHQqF5BO6J7tNJeP5do1llPr8dZ8zHonfhAu0PHAdMkSo+8o0wxg9lZWw==}
+    engines: {node: '>=0.8'}
+
   ast-types@0.13.4:
     resolution: {integrity: sha512-x1FCFnFifvYDDzTaLII71vG5uvDwgtmDTEVWAxrgeiR8VjMONcCXJx7E+USjDtHlwFmt9MysbqgF9b9Vjr6w+w==}
     engines: {node: '>=4'}
+
+  await-semaphore@0.1.3:
+    resolution: {integrity: sha512-d1W2aNSYcz/sxYO4pMGX9vq65qOTu0P800epMud+6cYYX0QcT7zyqcxec3VWzpgvdXo57UWmVbZpLMjX2m1I7Q==}
 
   b4a@1.6.6:
     resolution: {integrity: sha512-5Tk1HLk6b6ctmjIkAcU/Ujv/1WqiDl0F0JdRCR80VsOcUlHcu7pWeWRlOqQLHfDEsVx9YH/aif5AG4ehoCtTmg==}
@@ -416,6 +450,9 @@ packages:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
 
+  bcrypt-pbkdf@1.0.2:
+    resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
+
   bin-check@4.1.0:
     resolution: {integrity: sha512-b6weQyEUKsDGFlACWSIOfveEnImkJyK/FGW6FAG42loyoquvjdtOIqO6yBFzHyqyVVhNgNkQxxx09SFLK28YnA==}
     engines: {node: '>=4'}
@@ -441,6 +478,9 @@ packages:
 
   buffer-crc32@0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
+
+  buffer-equal-constant-time@1.0.1:
+    resolution: {integrity: sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA==}
 
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
@@ -513,6 +553,9 @@ packages:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
     engines: {node: '>= 0.6'}
 
+  core-util-is@1.0.2:
+    resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
+
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
     engines: {node: '>=14'}
@@ -528,6 +571,10 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
+
+  dashdash@1.14.1:
+    resolution: {integrity: sha512-jRFi8UDGo6j+odZiEpjazZaWqEal3w/basFjQHQEwVtZJGDpxbH1MeYluwCS8Xq5wmLJooDlMgvVarmWfGM44g==}
+    engines: {node: '>=0.10'}
 
   data-uri-to-buffer@6.0.2:
     resolution: {integrity: sha512-7hvf7/GW8e86rW0ptuwS3OcBGDjIi6SZva7hCyWC0yYry2cOPmLIjXAUHI6DK2HsnwJd9ifmt57i8eV2n4YNpw==}
@@ -577,6 +624,12 @@ packages:
   devtools-protocol@0.0.1312386:
     resolution: {integrity: sha512-DPnhUXvmvKT2dFA/j7B+riVLUt9Q6RKJlcppojL5CoRywJJKLDYnRlw0gTFKfgDPHP5E04UoB71SxoJlVZy8FA==}
 
+  ecc-jsbn@0.1.2:
+    resolution: {integrity: sha512-eh9O+hwRHNbG4BLTjEl3nw044CkGm5X6LoaCf7LPp7UU8Qrt47JYNi6nPX8xjW97TKGKm1ouctg0QSpZe9qrnw==}
+
+  ecdsa-sig-formatter@1.0.11:
+    resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
+
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
@@ -604,6 +657,9 @@ packages:
   es-errors@1.3.0:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
+
+  es6-promise@4.2.6:
+    resolution: {integrity: sha512-aRVgGdnmW2OiySVPUC9e6m+plolMAJKjZnQlCwNSuK5yQ0JN61DZSO1X1Ufd1foqWRAlig0rhduTCHe7sVtK5Q==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -675,6 +731,10 @@ packages:
     resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}
     engines: {node: '>= 10.17.0'}
     hasBin: true
+
+  extsprintf@1.3.0:
+    resolution: {integrity: sha512-11Ndz7Nv+mvAC1j0ktTa7fAb0vLyGGX+rMHNBYQviQDGU0Hw7lhctJANqbPhu9nV9/izT/IntTgZ7Im/9LJs9g==}
+    engines: {'0': node >=0.6.0}
 
   fast-fifo@1.3.2:
     resolution: {integrity: sha512-/d9sfos4yxzpwkDkuN7k2SqFKtYNmCTzgfEpz82x34IM9/zc8KGxQoXg1liNC/izpRM/MBdt44Nmx41ZWqk+FQ==}
@@ -760,6 +820,9 @@ packages:
     resolution: {integrity: sha512-BzUrJBS9EcUb4cFol8r4W3v1cPsSyajLSthNkz5BxbpDcHN5tIrM10E2eNvfnvBn3DaT3DUgx0OpsBKkaOpanw==}
     engines: {node: '>= 14'}
 
+  getpass@0.1.7:
+    resolution: {integrity: sha512-0fzj9JxOLfJ+XGLhR8ze3unN0KZCgZwiSSDz168VERjK8Wl8kVSdcu2kspd4s4wtAa1y/qrVRiAA0WclVsu0ng==}
+
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -803,6 +866,10 @@ packages:
   http-proxy-agent@7.0.2:
     resolution: {integrity: sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==}
     engines: {node: '>= 14'}
+
+  http-signature@1.3.1:
+    resolution: {integrity: sha512-Y29YKEc8MQsjch/VzkUVJ+2MXd9WcR42fK5u36CZf4G8bXw2DXMTWuESiB0R6m59JAWxlPPw5/Fri/t/AyyueA==}
+    engines: {node: '>=0.10'}
 
   http2-wrapper@1.0.3:
     resolution: {integrity: sha512-V+23sDMr12Wnz7iTcDeJr3O6AIxlnvT/bmaAAAP/Xda35C90p9599p0F1eHR/N1KILWSoWVAiOMFjBBXaXSMxg==}
@@ -872,12 +939,18 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
+  isomorphic-fetch@3.0.0:
+    resolution: {integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
   js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
+
+  jsbn@0.1.1:
+    resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
 
   jsbn@1.1.0:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
@@ -888,14 +961,38 @@ packages:
   json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
 
+  json-schema@0.4.0:
+    resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
+
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
+
+  jsonwebtoken@9.0.0:
+    resolution: {integrity: sha512-tuGfYXxkQGDPnLJ7SibiQgVgeDgfbPq2k2ICcbgqW8WxWLBAxKQM/ZCu/IT8SOSwmaYl4dpTFCW5xZv7YbbWUw==}
+    engines: {node: '>=12', npm: '>=6'}
+
+  jsprim@1.4.2:
+    resolution: {integrity: sha512-P2bSOMAc/ciLz6DzgjVlGJP9+BrJWu5UDGK70C2iweC5QBIeFf0ZXRvGjEj2uYgrY2MkAAhsSWHDWlFtEroZWw==}
+    engines: {node: '>=0.6.0'}
+
+  jssha@2.4.1:
+    resolution: {integrity: sha512-77DN1YurYgh+7FPCTJ2CQ6hVDHgIWiHxm4Y5/mAdnpETKYagX22pVWMz4xfKF5fcpNfMaztgVj+/B1bt2k23Eg==}
+    deprecated: jsSHA versions < 3.0.0 will no longer receive feature updates
+
+  jwa@1.4.1:
+    resolution: {integrity: sha512-qiLX/xhEEFKUAJ6FiBMbes3w9ATzyk5W7Hvzpa/SLYdxNtng+gcurvrI7TbACjIXlsJyr05/S1oUhZrc63evQA==}
+
+  jws@3.2.2:
+    resolution: {integrity: sha512-YHlZCB6lMTllWDtSPHz/ZXTsi8S00usEV6v1tjq8tOUZzw7DpSDWVXjXDre6ed1w/pd495ODpHZYSdkRTsa0HA==}
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+
+  lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
 
   lowercase-keys@2.0.0:
     resolution: {integrity: sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==}
@@ -986,6 +1083,15 @@ packages:
   node-addon-api@3.2.1:
     resolution: {integrity: sha512-mmcei9JghVNDYydghQmeDX8KoAm0FAiYyIcUt/N4nhyAipB17pllZQDOJD2fotxABnt4Mdz+dKTO7eftLg4d0A==}
 
+  node-fetch@2.7.0:
+    resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
+    engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
+
   node-gyp-build@4.8.1:
     resolution: {integrity: sha512-OSs33Z9yWr148JZcbZd5WiAXhh/n9z8TxQcdMhIOlpN9AhWpLfvVFO73+m77bBABQMaY9XSvIa+qk0jlI7Gcaw==}
     hasBin: true
@@ -1006,6 +1112,435 @@ packages:
     resolution: {integrity: sha512-IRZSRuzJiynemAXPYtPe5BoI/RESNYR7TYm50MC5Mqbd3Jmw5y790sErYw3V6SryFJD64b74qQQs9wn5Bg/k3g==}
     engines: {node: '>= 0.4'}
 
+  oci-accessgovernancecp@2.89.4:
+    resolution: {integrity: sha512-eYUJuoe6fHHv5KCGc6X56GVDEDS9tGGxalT7vVvF7Ep28vCoZ3s6+TJ4b1AeGmHiHvC0+Mywq4im3nfRGavIwQ==}
+
+  oci-adm@2.89.4:
+    resolution: {integrity: sha512-Fiw95eO3jFBcLkSYOgWA3UJAwe6yOSLj13Xvbuzc8CDUbg+pLjzjZ3GjiF0uFPbk0t5HJARCnMeDsD15DCnO7g==}
+
+  oci-aianomalydetection@2.89.4:
+    resolution: {integrity: sha512-NvCZrAjP5jpe+EFqnrPvmLZ9XpxqPE7aHgzsBFvwRKK/vIWmQS8PtIDyPJ3KXcIu5fjGPEOK1okukzSVQbVvYA==}
+
+  oci-aidocument@2.89.4:
+    resolution: {integrity: sha512-J92szEC3Z9ik28D7EVddmKA9GHUjuh/NUO95QznQqrGy5wvnmtHpmbd/k8uI6dHoUv+sWTePD3ZgQaHz2ltIzQ==}
+
+  oci-ailanguage@2.89.4:
+    resolution: {integrity: sha512-tylwGR5Aj19ZqdAT1AjuUmRQTFIdS9tOsOxV35vuQt1y4wD17F35saLd9w9tuunh2z1E0CNN8+K43H9E1VhTgA==}
+
+  oci-aispeech@2.89.4:
+    resolution: {integrity: sha512-6E1fDZ4WKmkN8D99hp//N4ckzP70IvJ1fstoueIchgEhrhZ19LCqCvDKHB55JdZNYVpV+8TUOKa6g0da6UV7kQ==}
+
+  oci-aivision@2.89.4:
+    resolution: {integrity: sha512-j/PToYcpB80QrG9NSKuD2nkX7/hEEZIepJFu6l3X1JJXdKkxpZhv3ewGDNkCTa2/qaogaQ1plsu2KKbOssv0Xw==}
+
+  oci-analytics@2.89.4:
+    resolution: {integrity: sha512-PGlZbsWvRgLPieyWYhgXX+KPpqFFjgJuQk9ICKsXRGhIcGf7+UVtCyiJlZII2n2eH7cDOFtigLVw+HQWOCK3RA==}
+
+  oci-announcementsservice@2.89.4:
+    resolution: {integrity: sha512-oB8L1NOARAiaxqoYS2irVCsfEH7+y97w9FH97ezgSatyAxrF8qa0MG49gedyv1mCuczZLUvv+fqh1CJEXoxu3g==}
+
+  oci-apigateway@2.89.4:
+    resolution: {integrity: sha512-1iBSL5N1weAtkHo9t2c73+XkffR1Aex3LWGPeMFAPzr5kC1BiBVDyFxt5e1uiKlbtALXxkMtYST5ugQESsBp8g==}
+
+  oci-apmconfig@2.89.4:
+    resolution: {integrity: sha512-toLRLn6Ta9cjJFv8yCgT+HAwKs/t5C8p3OugHC7XnwVFAsrUFwaZEYufzXkVutEBgfOq03cMc9G0HzBIF6vxbw==}
+
+  oci-apmcontrolplane@2.89.4:
+    resolution: {integrity: sha512-2J4RAMzgKUbpaP4sO7S0FxiLEX2pc6FT78YrbYZIxmJY8sWU2WEsWLZxqawogGEzPbaFhpiEGNbp4LpUs9CIhw==}
+
+  oci-apmsynthetics@2.89.4:
+    resolution: {integrity: sha512-bj34fHCfAJsnt6aFhZqZhmhjggAr5mjW696smlRs0+7gmFK/FeiKqrW2oc6k8ATPB4Vfrbate2VNk3bJ4N8zSw==}
+
+  oci-apmtraces@2.89.4:
+    resolution: {integrity: sha512-hm8JjMZUvWoLjYRI1orWAuC4A7KLYK/K3eFNIPuoeRCuQM3CNyx7k+SZKI5moReGdamZmH1Lym9c51QK1aV97g==}
+
+  oci-appmgmtcontrol@2.89.4:
+    resolution: {integrity: sha512-5uwF4RZ+pRkqiFK/XbozYmHoCSZqhMVnjDFtGZ8ETYpqcyh3xt8v3Mz0Vs2+9lZEjEfAmxutMvZv21SRF8tiIw==}
+
+  oci-artifacts@2.89.4:
+    resolution: {integrity: sha512-uIZSWFq/MNiLmRPhgBkfYOhDio9LsfWySGLzN1GcwbDTmUxHYpZyGJik55i3lipWg3SblTC0VB0mVHNgK6lZ7g==}
+
+  oci-audit@2.89.4:
+    resolution: {integrity: sha512-8/QXSHZ5AI6yZ/WQTUXkLqgu4Cd3S+d0SbuicVqds9HpOjhsnHNuxglaCR98WocbH2kwQCryzhtolIMk6cGtlw==}
+
+  oci-autoscaling@2.89.4:
+    resolution: {integrity: sha512-tn0KXFJMlfpK7GB6db3g/SejA9y2Sy9XhOI9RKE7nNuakS3PxxfyfirG/TKzkmDJFDbEfR30lj+9EA8+MQJ6JQ==}
+
+  oci-bastion@2.89.4:
+    resolution: {integrity: sha512-MZ0Xq58N4h/PfgR9tuIPbi5LQ32ci8yz8l6X51j/dBgUflUXXsZUaPUKSGa6MbFshgdQZzXtgkYJ/73Qu+NRQQ==}
+
+  oci-bds@2.89.4:
+    resolution: {integrity: sha512-JgZr9fY36eoVncgEaLfco6rbBCjq33szUn70YE5mpqsyB4AVp/bwH4b6pPVIsHlcxCXNIHz7CuAb/lp+mM3HgA==}
+
+  oci-blockchain@2.89.4:
+    resolution: {integrity: sha512-j7DYHdNov6Fvzj5D9/CZ0DkjiZmO32oWhS5SCP4NkanlWvoVwVNKl9UwELdMcJ3s/Kqjomv/7yV0ESP/OHWnbA==}
+
+  oci-budget@2.89.4:
+    resolution: {integrity: sha512-94SpB6MPxy5qHm4VX7be6NIkMaS0/P5kU0C+Sjr3FPCk7Lq9KnAK04O3Q1Bkb8AilCyGhrOJ6LAW00ifYvGGgw==}
+
+  oci-capacitymanagement@2.89.4:
+    resolution: {integrity: sha512-ffyjB5aJDS8wkxz0uM339KfPumBEVXAIFeuBBckzCli3g7ZrLZaKG9z4aKGZet5yQn8gTzmmmrXeJFHCf6oF4g==}
+
+  oci-certificates@2.89.4:
+    resolution: {integrity: sha512-vt2EGBf48mLYmJL4VoxQHaAobfWewb8AxlgcTvb7nqKKIT4nEUuI+izY7p7NLzXqvw+O7m7v95J7U7DQ6W4L9w==}
+
+  oci-certificatesmanagement@2.89.4:
+    resolution: {integrity: sha512-izZq0tVuTm1qqIeTZBeVR2v4P7/YDfLasyp5QTOKf6Skh7ZH8UwcFJEBDF+QukbwLs+Xiek3ipScOGfxv2ruhA==}
+
+  oci-cims@2.89.4:
+    resolution: {integrity: sha512-Jvwi7soAQfDXQAtB4/kAWJWTox1rgU/0tvVvI2eV8a2tjDOXAcf/rVMG7raMkouWCNPKkx1IDmYNSb94Se0OuA==}
+
+  oci-cloudbridge@2.89.4:
+    resolution: {integrity: sha512-E2IjNvLOBSf5aL6OG7JPMfRxsNbbLQ+pBArFmZRoaUXWPqRUDnU30MklDShFFkzRPPVIRFIEDzSUk7bXbLCgQQ==}
+
+  oci-cloudguard@2.89.4:
+    resolution: {integrity: sha512-SeceaMKo/iZ0OIKDAsmEOixAjRpyiZw/AcTiMTmdgo1YTUTwm3B52930s1i1FTXzakye8WYoS0E1DXbC9sZt6w==}
+
+  oci-cloudmigrations@2.89.4:
+    resolution: {integrity: sha512-xV2AU/qrMBuwIF1xlXTsJ2SAm6ww9maLBsORUzuUcLf6RE+dM45KzT5cSdOstTYtTbOQbUQ2Ua5esx9YPhuHQA==}
+
+  oci-clusterplacementgroups@2.89.4:
+    resolution: {integrity: sha512-qeelun0iFryd8ZJkUanQ09QFxQRAC1GdOGfn2ffHmsJcxADnrDwLYt+wycSEVQXPYohwEdU/i31VLfVdmGJ3+w==}
+
+  oci-common@2.89.4:
+    resolution: {integrity: sha512-PHR/E41FPiLLjAzQrBfdaNOr8n19GdcXNrPP/5yBvIaTX4vLo+sdKoxQ9HWCV0tUkR0OPLcH0Thr2gmGC42VNw==}
+
+  oci-computecloudatcustomer@2.89.4:
+    resolution: {integrity: sha512-TLVDtS4Yyp5tB0z+n7FgwZA5nR5phF2g8johj1QmTrpqwf2j6zq3GqS8yqouvnWKzePpUun1KlutH/JwYGmC3w==}
+
+  oci-computeinstanceagent@2.89.4:
+    resolution: {integrity: sha512-MNH6S5Bil1iFvEDYxp0dHIzoj2yi/ufzdSwa512sHAdW4EDTo5H09OZUk+V+/wA2Z0qWAz3omTYyJxCgC1nPIA==}
+
+  oci-containerengine@2.89.4:
+    resolution: {integrity: sha512-awVmsiUm6WE9SB6D3NDhCyLtsqUh8MFwfn6fvSLIEXc5Ue9jtqhN2WGD1FI3K8p/Jyzc0X3kwsUlEVDTkewwpg==}
+
+  oci-containerinstances@2.89.4:
+    resolution: {integrity: sha512-1mLjYYQA/SCRuqlnT8qYBxk5/h/nT5nYdpUWgjQ4kTzG2dQPeZEre5nv9loAceskoxAXmk/LY6dlhGP+VIDbhw==}
+
+  oci-core@2.89.4:
+    resolution: {integrity: sha512-/5vfSE0aMP/Wbz6nLmZsMvH6jN2bTyRRXDho96Br4nS1+9SAakwPt0c430e8FfCPPU1wt5u7iQUlxNwNaUwT3Q==}
+
+  oci-dashboardservice@2.89.4:
+    resolution: {integrity: sha512-fb6XVRJQzE34b1bIML3aLSmLkc9LnAeaGR4i1ZETFwR3mfYEnq/SzkS8gF1IGC4s6ab0TZYf233n1TY36eXV0w==}
+
+  oci-database@2.89.4:
+    resolution: {integrity: sha512-4cyeZJ+bZjPSwO6txvhD9mVUSs7/IFTIZJMPOJY+X8ISJqlYc3j4yT3+B5ROvQDyrSOPeFnnzRMBWrCw59LQzA==}
+
+  oci-databasemanagement@2.89.4:
+    resolution: {integrity: sha512-giO21rPUekwy0F932AhsBeKd75jwenDcRX0MuuEWZ/999TbMGy7/k4zaqw8nIXrv70AfrvXVLLNjeZsxbZb97g==}
+
+  oci-databasemigration@2.89.4:
+    resolution: {integrity: sha512-/dM1VqkNDoCgDt9REJ1fqe3VZ+CgCkbRoF7Hx9NFw2hlP5dwhJ16tBGou3ZBUeEYkuoopY9mt/G9vMrjrQVdAA==}
+
+  oci-databasetools@2.89.4:
+    resolution: {integrity: sha512-6oT97AciiO/el/mIpX4gXhVbqLlOgEkDiEA8m5yG8AGREA3dQY7QZSiodVqW/2agGWm6oPRFRJNUc+7QNqYT9g==}
+
+  oci-datacatalog@2.89.4:
+    resolution: {integrity: sha512-gHz9+EB/Ab/wPME22H6osQyk8pmpQBTPhm+s1M7S72ZvdB9N7uW7QVC8rUmnw0d7lPJM0sPip7P4Nkf+81Bjdg==}
+
+  oci-dataflow@2.89.4:
+    resolution: {integrity: sha512-PoHV45pwus7QUdb1y+AUXmjYEZueNtcynsYqr7LVhwk5Zt9mjQihS15VbQ4bF8VBSJACVE2MuR0POSNzHjmqVQ==}
+
+  oci-dataintegration@2.89.4:
+    resolution: {integrity: sha512-YaN+e7cNmRDbTPzIOBgOA2TQCntrSwJ8EPTHUOXyU5hg0fD4Tx0Lpwopbpb7AWdhj1iTlBAtMwK6kCz5SlHsIA==}
+
+  oci-datalabelingservice@2.89.4:
+    resolution: {integrity: sha512-AwhicnlQWhb3cLJUslRjmSeGOP6sqayCF+DYiqk/c+1fJ6BnSKIhj+x55T9Bbc2Mpkm27rN1Xz02JGveZjMLwQ==}
+
+  oci-datalabelingservicedataplane@2.89.4:
+    resolution: {integrity: sha512-jEUUSCaMED1SLNpUzBgneWiuy+NN73ZeQAbznjGdNvUuxwLkvAaIc0gM8raMpvW1pmrh0iQnfMPAYvDpJfAMTA==}
+
+  oci-datasafe@2.89.4:
+    resolution: {integrity: sha512-pw4jgNiHwUNiKrjs4XWy8VGcy+qufgEn3QaBLr9Z7o8/kj5T/8mtzXXcu1KqatZ1s5/eYcfzQee0L/76W9R1oA==}
+
+  oci-datascience@2.89.4:
+    resolution: {integrity: sha512-m5+WPil1/+F9htzDzBdzB9nEIR82rhFTTTOwPbxKsXaKDxoz3bsg0ASgAUDHf2wbJos0R/z7z3vivjr3ejdDHQ==}
+
+  oci-demandsignal@2.89.4:
+    resolution: {integrity: sha512-lxjuSMkM5czd559z9/WSQZFEylOr78R/H/MYPb3oywGfcJF2GOQbAGF7TnnknF+3xqXFs+hfmBesM+HsBneNOA==}
+
+  oci-desktops@2.89.4:
+    resolution: {integrity: sha512-CvKWws6CkhJqzys2p1isFzN/9If3xYYoxxAmASdLJEY2Td+ziDPmEMoCIAeY0KpgAUR3EP7izz1K27vk1LDgtw==}
+
+  oci-devops@2.89.4:
+    resolution: {integrity: sha512-WxH0Hn3qBeo9U7wXb+/EZdr1QXYLowofGG9LqmnMv988kP/ux2oBTNvSvp8+qwZUSVKyBmopIPJji1GsoHqaHA==}
+
+  oci-disasterrecovery@2.89.4:
+    resolution: {integrity: sha512-0HFYuJDHkcAcW5erhnhExj39ZdqroaPkJRUTo9DTpPIz4rxfMLL3WhPHXnPLZM4gephqZlkS723mvX/J4I+cJQ==}
+
+  oci-dns@2.89.4:
+    resolution: {integrity: sha512-TAIkYlQhS2VoLBYjL9RCZQqSJwGa9GbI2VZSOQWeBDmyniLwt1M35OjGJA9SkZZmqr2TrR6ag6HVZYm+dut0wQ==}
+
+  oci-dts@2.89.4:
+    resolution: {integrity: sha512-1d3VDhdawlZ0hhmIUIi3YMvS3MTcqLogcuuRJn62CwI047VqYGU2DuIXMQhf/eqdmGNCZH1j75vPfmbNvGpXew==}
+
+  oci-email@2.89.4:
+    resolution: {integrity: sha512-eUINtNnCdAA7sx80Bgp2F4OHh6+392iDjYvNVWV+x64NOyIzz6oE4lBU32OnbOpCS7PqiYPbTDLsep+q25L9Mg==}
+
+  oci-emaildataplane@2.89.4:
+    resolution: {integrity: sha512-vtZ2klamqQhayxjapz63BxvNWHkPX6KQk7CNDhqW9ShcAl328KY8U8wbpAcBDZ5wvnKV5f9gOv2MEsX1Uj/+0Q==}
+
+  oci-emwarehouse@2.89.4:
+    resolution: {integrity: sha512-bZa9bRwvDgNBCA5aC7BdiUYImeLZsDVijMlCOEVEwB9qFNIWVz58/izpVemS3FXcABXx64OGbqdUKvjGu+x47w==}
+
+  oci-events@2.89.4:
+    resolution: {integrity: sha512-VKGMGm4kYTZNzoKrLo52k4/x0Dzwu19j8+kHDaKXEnQhvo/Bvn3lZ1Ly40RgfQiwzdDK2IAkm0CX2ribxkdQvw==}
+
+  oci-filestorage@2.89.4:
+    resolution: {integrity: sha512-snI8i0niMXmovRBiZ8WZQI5MmABE/IEczSM/gvDKNqNwcDkL/1Y7ZPghKleg5AONo+KyNuX0HvOTP1UVbTuxRw==}
+
+  oci-fleetsoftwareupdate@2.89.4:
+    resolution: {integrity: sha512-igffe1Nm/HJf1e8w+YE8EMKetwLRe/dxd/Ra5jYOa1z4TTqjYSyG1ecpZONWIajnKz/S1EZ+yHCXEKVbJ6viLg==}
+
+  oci-functions@2.89.4:
+    resolution: {integrity: sha512-dFSxbA6MVRvxrsrlEfnXIzX3dyUMNO4WNYuCuGKUjBABfv4q8k9mhxgpbaG1TBdMmoKDrEvK3YOG6Td1//49MA==}
+
+  oci-fusionapps@2.89.4:
+    resolution: {integrity: sha512-hiLAyouUOTnOrmibAm7NYDMCmIggqwmfIBjwop16NtCIjOEWzAU/gsvh5M60cu/1KmztjXboACoWIOlBjX08tw==}
+
+  oci-generativeai@2.89.4:
+    resolution: {integrity: sha512-Hh8qCjEcIa5Opv/zkyMRhmH/bF6LAi1u4SKC1RaR9bWx+ILx2QFEcBsUc7UbQ65bZjV1rbD0JeMLpUEMzy9ilw==}
+
+  oci-generativeaiinference@2.89.4:
+    resolution: {integrity: sha512-Gro8WsqW1vSZ5vLd4XpeaxJEn853ON+P0iMQTZIqZmkvf4e0STl3qjJHE7mpcYEoKex4PzEYq65UblUiuaqzBw==}
+
+  oci-genericartifactscontent@2.89.4:
+    resolution: {integrity: sha512-S4ozRabKtSvbao3OIOnDGWxWgvxrb9hvDgT/arxVolQZU382zXW98h5zvjbBJXQ/QFLtgUBoD3d2ot+3MnX6PQ==}
+
+  oci-globallydistributeddatabase@2.89.4:
+    resolution: {integrity: sha512-JlAo6Qfl6XkEUiGr/AjvO5igfrfxDDhcNHuXYGw25yIC1Z9z3z0tNjHHMSv6kdd/hgYb2CsmvA78V7pRbchzKg==}
+
+  oci-goldengate@2.89.4:
+    resolution: {integrity: sha512-AxFr/aQExYRP/JRqgsHI/dxjTaJ6652Wy5ru1EOaYgZ0RSJ2ZhRyFOcK+mQtRaIHsyTVn7XvX3FT1bg9mqbZeA==}
+
+  oci-governancerulescontrolplane@2.89.4:
+    resolution: {integrity: sha512-qEuRVbJzV5zaH45M9pqKdx8tulhuzJSfuWM5EugSF65XXxXQs0+uPv/pVh/DTcSmU8aciXVUkY6cI8UhI2lCpw==}
+
+  oci-healthchecks@2.89.4:
+    resolution: {integrity: sha512-shso1fo2agO3GkrD4Bfgk+pFa5K1nsR4Bb2DHZxNejRjchl9vjR3I6MU+FozwDztDmKs2cYpcPIzZ0FKNEEmew==}
+
+  oci-identity@2.89.4:
+    resolution: {integrity: sha512-seR+9B2xfq00wU/8vnBDONOWFWA/DKTfhvtAG5dyrA25RjrsHtGVG+SzopNCxXgiu7hbL8Ya3RMLE8Qs/seNCQ==}
+
+  oci-identitydataplane@2.89.4:
+    resolution: {integrity: sha512-jr822tOaABkRKg/0ZhngsVom9ocHTfwd6ibZw64woSoHIZzqWSd3yzhZq+vxBSFiudk0fg+j8Lz0Y2kQKLS8tg==}
+
+  oci-identitydomains@2.89.4:
+    resolution: {integrity: sha512-u/ZvirE44SUjUybos/PzHSdiQOhaDYWWLjxtSfcfxBVnhIhTIEUyqrjCjdkE/8BvcwjgtlvXZiDRig7S6ucNoQ==}
+
+  oci-integration@2.89.4:
+    resolution: {integrity: sha512-uj2i8TyUidHATdqbLn+NonBfYp1kquXU5xLDoVDOdFOncupuCKwv0NH0bJa8Guhsjx26HM4VhNfQWLJ2D2ic5g==}
+
+  oci-jms@2.89.4:
+    resolution: {integrity: sha512-E05d7KEbg3YAQ19ax9OUtoxeGuWNPbovwzv3edTrWWh2X/baU8XD5VetVKy8Uuh4Rj8TMxVz2dcZfYWvUe0T/Q==}
+
+  oci-jmsjavadownloads@2.89.4:
+    resolution: {integrity: sha512-8Vb+JNLMQfZv2WgZsP9GqN5V6WV8zazk4WFRTc/C4FLXTz7K6yk9/45W2D6OtHQyN0SDfbaZ2+84w9YVZ/XdHA==}
+
+  oci-keymanagement@2.89.4:
+    resolution: {integrity: sha512-82TCy8JWCfiu0ukoTpEanNkndinoptjTVsXXQddLCdvxyLSFoOXRsuOX3Jvyl/ppVhfHtpUQuI76A1xZWY20xg==}
+
+  oci-licensemanager@2.89.4:
+    resolution: {integrity: sha512-NV3wSRn1vXgbfBjyFtK8abPlYyZ+UlqfzAFcaWvVCh//w4TmScriy+6ocmXJsRXUGJwIfrO4oRRmmzEbSTPGKA==}
+
+  oci-limits@2.89.4:
+    resolution: {integrity: sha512-J31KNMdm31f3JkgKrYpG2U+Zlk8JZMw8giymHtTjKfaQ1vYzTIp8aAmVHynXsgqYf3cjtJaH5S0606ZMVAHWyw==}
+
+  oci-loadbalancer@2.89.4:
+    resolution: {integrity: sha512-qCRoEXREtuLS6dj/liYWeiIDkDsc6a5938v5u3nDfvYfnHuCcsPPpw3W+32IihGu6Cgr1XQiv90dJog7S2QiJg==}
+
+  oci-lockbox@2.89.4:
+    resolution: {integrity: sha512-uwimdxzhmlTuqEDl9dYKSQX8RvZz5SQYNxvi7udnxRe/ty4baJH7HnN2GRb8+Ecjp0T+AbRQQI2kRXTeZyXcnQ==}
+
+  oci-loganalytics@2.89.4:
+    resolution: {integrity: sha512-c+POMg+M5bVEGkh3YRUexoROikPdZyW/AU3tcTl0CBXm+a/Cnn37b0cOeEkZhSEp1GizJXTefGZG5qRb57dSMQ==}
+
+  oci-logging@2.89.4:
+    resolution: {integrity: sha512-JaWAQB89kzjVt+0EiVidNud+oWRTi+WbefOO4pyXUwRaiknYYKBjG+vsPZj7XjyaLat4M3aSW0kKHY7IJmsIMg==}
+
+  oci-loggingingestion@2.89.4:
+    resolution: {integrity: sha512-XFeX3cg2lvT68QRESQzMwuXQGfxxAh0MRRNaLz7K255ct3TuhAAKZkn9uMxfLfu6HYZIHEtmFI4vODKbTdhmSg==}
+
+  oci-loggingsearch@2.89.4:
+    resolution: {integrity: sha512-dK7zDCXz53t34ej770w96UDoxk+nuQV9JIX3qPqKQtIWQ5J+EM+rr68LmNFIPz3cYQ1/auKBVSWCf2rnxL3iEQ==}
+
+  oci-managementagent@2.89.4:
+    resolution: {integrity: sha512-hxgQQPh0L6gEyu6mVwRFr3+RPkcRBkS1Ui7CnG+GVSbE68e4jTXnqt85aYxZwgzplhKkIIh0rJX3eY+jc1jNbg==}
+
+  oci-managementdashboard@2.89.4:
+    resolution: {integrity: sha512-dHUsAu8WIiDf3Scc/aEkaf2/TgAjeDxK1bngkfSVXpbk+sKAjTVwgw0wpOG+MdZF1R6tdP++OyEDiVOXQ012eA==}
+
+  oci-marketplace@2.89.4:
+    resolution: {integrity: sha512-0C0dCh+nZH/NlelpEWG6Tv6GUEJ83h70/ixM+CLZwoXAx50iJ6U6XxO1mBgqXmwtdgMaQqrDoEM7sAZBG9yj5A==}
+
+  oci-marketplaceprivateoffer@2.89.4:
+    resolution: {integrity: sha512-54duJj7BdayqKOvVHEo/e2K/G2Jh7OhSE7x8MJDKTjmbqsj9O97QaGtJJfNa2HDyGnz5iUKXfnPmsp1W1biWUA==}
+
+  oci-marketplacepublisher@2.89.4:
+    resolution: {integrity: sha512-Inw5SvYd6Pmi4lbTpqSsL/SW7oYOiZty0mym7MtOrCXkTboGjkMjTeqf3V4p4zb0umoTWONvn5wSNi+jqLPB4A==}
+
+  oci-mediaservices@2.89.4:
+    resolution: {integrity: sha512-9Sf6N+r+xYlDKcMlbM7UdEW8W+EQR7b8hyybOGq4CUegMuPD+wn5aW5X+At3ErwCfvbsjKb+D+sxJsSrWJzp1A==}
+
+  oci-monitoring@2.89.4:
+    resolution: {integrity: sha512-vPxVmn1a4UYeYwTfCE0uV6e4jj/odMa3D8QGkTpfxdGHoR8KNVVo0fjZDbdiO+5G8/fQvPMHiGYWDFYhv5i0ug==}
+
+  oci-mysql@2.89.4:
+    resolution: {integrity: sha512-MMw1mcdcdD4CfGJvqIXwPaysZQkDOylKKInq9x0VRZp2Q6CtpHFh0TI776iTl06bc/IgIUbhaIffJLBO3J0bNg==}
+
+  oci-networkfirewall@2.89.4:
+    resolution: {integrity: sha512-VUuOy3367OMj0snmMEiJ2kBHzh0FIFVJBJOSuUGmG78m/20vG+t2GmUqV2Qi4klwXTYe0wGKxnWXcv+AaIM58g==}
+
+  oci-networkloadbalancer@2.89.4:
+    resolution: {integrity: sha512-vQr6FlPlA/fFj+yBR6twcIx8A4yKv4HsnaFJQG/KQHQrli7Gm1u/66Y82KJ8NTyaK6yUGAEvb4vQqQDwDvwHEA==}
+
+  oci-nosql@2.89.4:
+    resolution: {integrity: sha512-zYXfAa8+XnDbm4jGLjfE+UmyxK6MGHCHVmw2s2PjnvBADYe42grLIiopt+O7Q94+cwiiZBw3BhJrmno+UTHLSg==}
+
+  oci-objectstorage@2.89.4:
+    resolution: {integrity: sha512-ANSrN5stB0WXa1GTJD6DNWiwFLUKVf3hD0RbtYERfk8rzWC/Rz6mmCD1wK/nIn8JM2YOSS+4MzWmpHQcJWkSxA==}
+
+  oci-oce@2.89.4:
+    resolution: {integrity: sha512-QeJbAJuocRRAymzSQHu1bCx9IOigsQmf0Qv8Sy16IBpsCzTmRiyJk9pUm6rW2OIT9hLKXeJjKyRG8MIN8+3LSQ==}
+
+  oci-ocicontrolcenter@2.89.4:
+    resolution: {integrity: sha512-g1AaCB8ZLc86cqx+zvre8pA5vIbuLUiT0oDXb4X/rQXgtPHHm78ixcd1VbwBSHHbq1zCQY7pFBf1Fth+k0agLw==}
+
+  oci-ocvp@2.89.4:
+    resolution: {integrity: sha512-J05V+FW7AWLWAjF8cnPv3DNvudPzL0PZbtG9Q1HXbd458tPUfTFOt/iEU5O4jX/ULTq3Kppwt5JyFMzIw6InqA==}
+
+  oci-oda@2.89.4:
+    resolution: {integrity: sha512-zFczzf4+4lRaeyLXRzPeB2Dkgr6SaX8AKFkbr+AvzEL+l/Ad5gM43/EI7D+HC4S1NdcjN8n7xYeCz89YluA9pg==}
+
+  oci-onesubscription@2.89.4:
+    resolution: {integrity: sha512-B8SKvsslUxb4LG5J/qhua6AFpSiykm+YZzEmgFhNZonh65GK/sfjnZ5vd+nUHoGVxe+23CLpvYJ4c6uJ0gypvg==}
+
+  oci-ons@2.89.4:
+    resolution: {integrity: sha512-QdTxBLJGoQHJldzXNYROyxqhdvS+zJQxjqXU582vJToI6yeu5ktlNuwTLN2yMzyHGWNQCpfrUsU9wEVCidKNFA==}
+
+  oci-opa@2.89.4:
+    resolution: {integrity: sha512-8gMZ/bHzPpNaFV+bD6mFlN6o5+Z85ElpLbe34TlAf5Ql5xLfd3ZPpQZaLQ9L06rLQyjj3MnJ+hnm36VDrSCk3Q==}
+
+  oci-opensearch@2.89.4:
+    resolution: {integrity: sha512-IE49Cy9JYimkMlcCPIMx4i3YHXuk8VtLMHftMZw0yDV59lrpKLOU0+uN17fIVO+KH3HGsSanP1P388P+wFXktw==}
+
+  oci-operatoraccesscontrol@2.89.4:
+    resolution: {integrity: sha512-uTbyZixPjt20cOoKFL76QpEaiuaIOuKcP7HB5PmylmFLeKxw09eooVSin+XxW4Bqy2YBPxdX4S+CdFjG+0hmww==}
+
+  oci-opsi@2.89.4:
+    resolution: {integrity: sha512-gPB4eu+vH3oDDvVPBfb+RIqj63cil02LZQmHqmFuiMr4+DVQH4E3K3BEf/YFDLfenOSFiNPXrGcWi/8tihALZw==}
+
+  oci-optimizer@2.89.4:
+    resolution: {integrity: sha512-wIjYsER1a80MP5W8oA1oovvuImz/dl9NmEq0Y6kM7yry2bmmZCG/RhRgCUKjrHpTE/0gKjS0J8CtScVIDQRBWw==}
+
+  oci-osmanagement@2.89.4:
+    resolution: {integrity: sha512-GSoGFVAzuEhGitOQxLDFlWAhiY2OTjvUQbcP4w5CZ6j0sXRsWJ8WsDz1IrcyZ80EvK1SY+a7qhelP2jBIT+zmg==}
+
+  oci-osmanagementhub@2.89.4:
+    resolution: {integrity: sha512-LSO8U38wopNnItzyrNMl7nythhlttIQxu4N4T9XcXe2wUhW44I1MH7DXXhuXt3Lkc6Slux50ajl/aIcaxv3lEA==}
+
+  oci-ospgateway@2.89.4:
+    resolution: {integrity: sha512-OCm1XG7tu9BGzMxpi+RCHZDB7ybLqxlQVXrSuvaD3zUW4vzQW1b9N/clyr2tWyrsMzldtNEM+geegu3QTg4KoQ==}
+
+  oci-osubbillingschedule@2.89.4:
+    resolution: {integrity: sha512-njTR5A7lWfsgsZmlJXj3efHsfo4SV/w2PWVLTF6V4WuqSRigfqRKyGwvul5dCUzpxvXieCiHsww9zUU0KiLr2w==}
+
+  oci-osuborganizationsubscription@2.89.4:
+    resolution: {integrity: sha512-pnkSpQQMQUcnkQfZ6rzoB3i7IfjrOqGE7Z3JoyuwuwqXGT3wxKhCsAH0b8Dzff11We8Mz+Vhb7Bl9vSJOcYGLw==}
+
+  oci-osubsubscription@2.89.4:
+    resolution: {integrity: sha512-Is8SrAGBiTAJHgczeDaQ0TOVdpMPFE91yuWDZwF4I3mi8mtgoZudXZ3XXdvCNEq4ieu8uIBQmGt39jvKEjMNIw==}
+
+  oci-osubusage@2.89.4:
+    resolution: {integrity: sha512-mrtPzYJylpj5aamCm4xfsNAfNVEUIKWOaixBbFsoJyLwJ6JW3vybmfeTmFb40omDvgGM6szwMThSCCRgFizCew==}
+
+  oci-psql@2.89.4:
+    resolution: {integrity: sha512-6zCPsYEkeNGEAKr62mP2Ks0hxe3SWVeY9co8uBcZpm4dJI6PDqdo2LCeun21iVkXCAcw1XYrRqL+jb5RoNYsKA==}
+
+  oci-queue@2.89.4:
+    resolution: {integrity: sha512-mhLmRwrUtRokvaPbGz74GNoAVn58WY+beLNUZUi7Jf7VLHZEyYtApXlkoTngQ8D2HddA+ntagAOaX67qDdfQ6g==}
+
+  oci-recovery@2.89.4:
+    resolution: {integrity: sha512-OJOICDdPyVw7czhxTByaFwt2C2V90pVjq0Ak+muHg1LgNHa1h0rjXsAwOWuPbQlZOmWf6VIcEtYX7mnRhV0GyA==}
+
+  oci-redis@2.89.4:
+    resolution: {integrity: sha512-MYJ4ZtxUTpP6aVUdyLe8574FK+cH3/TrmTe870eBjc2NCxIFQJCKpTy/fKO87DMtnzNAUexSuOWTIl8Ky/p2UA==}
+
+  oci-resourcemanager@2.89.4:
+    resolution: {integrity: sha512-isf1TKwY7vIHjq46tDRBiKRRqqiMY6fRHMZ3wsYOevv8gwFSZNko5qExNw/ZC4qOKS1ePLpAXUwQE98UoVMlLA==}
+
+  oci-resourcescheduler@2.89.4:
+    resolution: {integrity: sha512-aCwc1VP1Sty8OLNUSON239IyIIRTIikKlJOpO1qyCQ7PoRtbsKkxarQlorFslaFvlR47R+PUN0dKhyvTG02+kA==}
+
+  oci-resourcesearch@2.89.4:
+    resolution: {integrity: sha512-iWPz21FFtbV3+lYL+hDDi2bP2je7WxkV9CX7ZaMNKs1kDSeae+uiOKsuNwoGR/k9VfuAEpA6dB6Iy8n4hW2owQ==}
+
+  oci-rover@2.89.4:
+    resolution: {integrity: sha512-8sWZHJj3nrssew0HAeWHxzz2kHU2cTcQHvzbKXbZWwlc8Tr5tS+hXZuYGwjhXdTk6wCHpPgCPgQLrhZnvfOOnQ==}
+
+  oci-sch@2.89.4:
+    resolution: {integrity: sha512-SU4/h2dMnQZC9kvWeqJl88XPhf35iYR7gM6qsRUzVeHJoc/l3jYD0GA/0QyJDc8hrWIgxgamU1dFlJWLQ1OCLQ==}
+
+  oci-sdk@2.89.4:
+    resolution: {integrity: sha512-f7MUecYmsEP8aQbczol3UhUtdWaFs4A4pxrysteOxDd+qlZ/D67bWMZ3vwoNxFS6bmdl7MvUJwWCJS71CpV6pg==}
+
+  oci-secrets@2.89.4:
+    resolution: {integrity: sha512-uYJXdWThMkcLj5e6WTQj6IhzPhnybw9L+BM5UEK9gdrukHLC9eJV8zLFr406dc+TXkdWTpW+I241kDqBfKwQrA==}
+
+  oci-servicecatalog@2.89.4:
+    resolution: {integrity: sha512-BeEFQg4KzrCRKbhLbsX12fUT+2azpdT3p1BFZXu6PYckKzt5bWTlbqJTpmEGWRX3TZWaoaOErW51xmC+IyoY5g==}
+
+  oci-servicemanagerproxy@2.89.4:
+    resolution: {integrity: sha512-yZTT0vs2VnPvq602Vpk0MIbyjt2CurjP7nZC6jwJV2oVcd+4URp2hNEkSCjlEGOCNy9byroZHgMWCfheX3Morw==}
+
+  oci-servicemesh@2.89.4:
+    resolution: {integrity: sha512-63a73JTazRBiZXcT5LLZ7BMaLua+5IGIvWtXELCDBeLkPiQfP95valqtg8/4nLi5xkZ2b2qaZ73WbtCN2Q6kPw==}
+
+  oci-stackmonitoring@2.89.4:
+    resolution: {integrity: sha512-4710jD8RfOtRsmgM3DOxaina8ERu1okKfBq/TdTYZHGJ+EJRiu8/wq9GKQuynhp+bGYyuxM+25nPJnXLVRSv1Q==}
+
+  oci-streaming@2.89.4:
+    resolution: {integrity: sha512-qoBsurprbitp9/gp7Ge3lveVDMFVdHHNlPbtj2p009VrFhgjZKlTSafxOHYM9LfPJa7gKk8RSsFnHNB7Oon1hQ==}
+
+  oci-tenantmanagercontrolplane@2.89.4:
+    resolution: {integrity: sha512-h/jFbIyVPu7U/zH3slqNanJ7j4O5w0TFO8XAz+48x/tUnFpwRbyI24/dkuct+p8rMDkbVa3nNUaEbrCXVtH8Ng==}
+
+  oci-threatintelligence@2.89.4:
+    resolution: {integrity: sha512-SIeB6txIHzbiW3hJ8t22dOUKy7NHcp7FRNPFDl2W7wkJfv2wU7EJckJ8n7CEYw808C6+RcsAr67MGt/UiQRIYA==}
+
+  oci-usage@2.89.4:
+    resolution: {integrity: sha512-AWDO6JVBtVNqZijWk78FFaCHw1p/pHpeDfCLJusQt0hbtWYRedrH8PzTTSk49ZuMzeUxSKAbWZod/nWSKB0uww==}
+
+  oci-usageapi@2.89.4:
+    resolution: {integrity: sha512-tiJ4wTnbFSqtvJFjidpmZp0zaNN6Y1UBqw1s5K206RtpBi6PhUA5Da/D51uQiVzDYaCPGRufP62xHO3Fp4O/yw==}
+
+  oci-vault@2.89.4:
+    resolution: {integrity: sha512-GgEK0QSFHCPT1XgJ73AC/HEOVkl+QifOv7J1+CKNchXAAkaUWvBz8KldCvRp1glQ1izoSuIQxJLv00d3WKPmhw==}
+
+  oci-vbsinst@2.89.4:
+    resolution: {integrity: sha512-NhcpQWYR1yz+TnuQG4yuHEGgdpp6PLcUmlZ9pGjtUx35BqMXrRvtfj++MhPvLVxkqnP+k5pKgxx+HyisIKUYIA==}
+
+  oci-visualbuilder@2.89.4:
+    resolution: {integrity: sha512-Dgjcb1oZUOZQHfG4bIWkPfgcyhB0JDDTeWdPAMtaI6Xmx0Yf1TNBuaLc4i3CmiLtFt6SJ/UutztVBNEbfQaXhw==}
+
+  oci-vnmonitoring@2.89.4:
+    resolution: {integrity: sha512-ESfCahQoFLwUhCswaAL7UYVHWNTffyqzo/D38nvMgfiUNZ9Bjp1fA+dIIN09uF2HdkGvaRQjfyy4TzhxItDnxA==}
+
+  oci-vulnerabilityscanning@2.89.4:
+    resolution: {integrity: sha512-njm6ZWlQG/2e6EFEdL+znj8S+YYehTjtKJDuPPEhHo+BgPTwdkSa7ogxX18NApp5IQRbm2zJxMZabAowGZt0jA==}
+
+  oci-waa@2.89.4:
+    resolution: {integrity: sha512-3Rv/oPJBioG0UIqciFnZrjY836rJmwqHeoMYdbVVyWuWdjJyeQjYkpNSA4nBOlo+XvXJp+zYr71I/aXeP6jcQw==}
+
+  oci-waas@2.89.4:
+    resolution: {integrity: sha512-l0opvf43cryEI+nTxVB7xlm31zs4R9NRN6/VO8X/z0nDdQDADosgq123fPr6hhhculbEA2o5w97uPsrubqY5sQ==}
+
+  oci-waf@2.89.4:
+    resolution: {integrity: sha512-ECEE1kjfHggHkvIu7T+wt8eC1/UaTl54REvZqcz7DtQ2xmKyZnuTJLv+3+Er0s+ztVsJ2wlvztCuoL99FZAiEA==}
+
+  oci-workrequests@2.89.4:
+    resolution: {integrity: sha512-M/KK9CD/gELc6gifR4CHvbWeikc/oLPfMV2/2Z9LBDx17whV8+i18faVevrVY7/pS+gaIFRmGnBXLiZPOcqDYA==}
+
   on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -1016,6 +1551,10 @@ packages:
   onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
+
+  opossum@5.0.1:
+    resolution: {integrity: sha512-iUDUQmFl3RanaBVLMDTZ6WtXj/Hk84pwJ5JWoJaQd1lXGifdApHhszI3biZvdBDdpTERCmB6x+7+uNvzhzVZIg==}
+    engines: {node: '>= 10'}
 
   os-filter-obj@2.0.0:
     resolution: {integrity: sha512-uksVLsqG3pVdzzPvmAHpBK0wKxYItuzZr7SziusRPoz67tGV8rL1szZ6IdeUrbqLjGDwApBtN29eEE3IqGHOjg==}
@@ -1257,6 +1796,11 @@ packages:
   sprintf-js@1.1.3:
     resolution: {integrity: sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==}
 
+  sshpk@1.16.1:
+    resolution: {integrity: sha512-HXXqVUq7+pcKeLqqZj6mHFUMvXtOJt1uoUx09pFW6011inTMxqI8BA8PM95myrIyyKwdnzjdFjLiE6KBPVtJIg==}
+    engines: {node: '>=0.10.0'}
+    hasBin: true
+
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
@@ -1319,6 +1863,9 @@ packages:
     resolution: {integrity: sha512-Y2fmSnZjQdDb9W4w4r1tswlMHylzWIeOKpx0aZH9BgGtACHhrk3OkT52AzwcuqTRBZtvvnTjDBh8eynMulu8Vg==}
     engines: {node: '>=14.16'}
 
+  tr46@0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+
   trim-repeated@2.0.0:
     resolution: {integrity: sha512-QUHBFTJGdOwmp0tbOG505xAgOp/YliZP/6UgafFXYZ26WT1bvQmSMJUvkeVSASuJJHbqsFbynTvkd5W8RBTipg==}
     engines: {node: '>=12'}
@@ -1330,6 +1877,9 @@ packages:
     resolution: {integrity: sha512-C1uWweJDgdtX2x600HjaFaucXTilT7tgUZHbOE4+ypskZ1OP8CRCSDkCxG6Vya9EwaFIVagWwpaVAn5wzypaqQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
+
+  tweetnacl@0.14.5:
+    resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
 
   type-is@1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
@@ -1364,9 +1914,27 @@ packages:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
 
+  uuid@3.3.3:
+    resolution: {integrity: sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==}
+    deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    hasBin: true
+
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+
+  verror@1.10.0:
+    resolution: {integrity: sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw==}
+    engines: {'0': node >=0.6.0}
+
+  webidl-conversions@3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+
+  whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
+
+  whatwg-url@5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
   which@1.3.1:
     resolution: {integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==}
@@ -1647,6 +2215,14 @@ snapshots:
 
   '@types/http-errors@2.0.4': {}
 
+  '@types/isomorphic-fetch@0.0.35': {}
+
+  '@types/jsonwebtoken@9.0.0':
+    dependencies:
+      '@types/node': 20.14.12
+
+  '@types/jssha@2.0.0': {}
+
   '@types/keyv@3.1.4':
     dependencies:
       '@types/node': 20.14.12
@@ -1656,6 +2232,10 @@ snapshots:
   '@types/node@20.14.12':
     dependencies:
       undici-types: 5.26.5
+
+  '@types/opossum@4.1.1':
+    dependencies:
+      '@types/node': 20.14.12
 
   '@types/qs@6.9.15': {}
 
@@ -1675,6 +2255,10 @@ snapshots:
       '@types/http-errors': 2.0.4
       '@types/node': 20.14.12
       '@types/send': 0.17.4
+
+  '@types/sshpk@1.10.3':
+    dependencies:
+      '@types/node': 20.14.12
 
   '@types/yauzl@2.10.3':
     dependencies:
@@ -1708,9 +2292,17 @@ snapshots:
 
   array-flatten@1.1.1: {}
 
+  asn1@0.2.6:
+    dependencies:
+      safer-buffer: 2.1.2
+
+  assert-plus@1.0.0: {}
+
   ast-types@0.13.4:
     dependencies:
       tslib: 2.6.3
+
+  await-semaphore@0.1.3: {}
 
   b4a@1.6.6: {}
 
@@ -1742,6 +2334,10 @@ snapshots:
   base64-js@1.5.1: {}
 
   basic-ftp@5.0.5: {}
+
+  bcrypt-pbkdf@1.0.2:
+    dependencies:
+      tweetnacl: 0.14.5
 
   bin-check@4.1.0:
     dependencies:
@@ -1785,6 +2381,8 @@ snapshots:
       fill-range: 7.1.1
 
   buffer-crc32@0.2.13: {}
+
+  buffer-equal-constant-time@1.0.1: {}
 
   buffer@5.7.1:
     dependencies:
@@ -1862,6 +2460,8 @@ snapshots:
 
   cookie@0.6.0: {}
 
+  core-util-is@1.0.2: {}
+
   cosmiconfig@9.0.0(typescript@5.5.4):
     dependencies:
       env-paths: 2.2.1
@@ -1882,6 +2482,10 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  dashdash@1.14.1:
+    dependencies:
+      assert-plus: 1.0.0
 
   data-uri-to-buffer@6.0.2: {}
 
@@ -1917,6 +2521,15 @@ snapshots:
 
   devtools-protocol@0.0.1312386: {}
 
+  ecc-jsbn@0.1.2:
+    dependencies:
+      jsbn: 0.1.1
+      safer-buffer: 2.1.2
+
+  ecdsa-sig-formatter@1.0.11:
+    dependencies:
+      safe-buffer: 5.2.1
+
   ee-first@1.1.1: {}
 
   emoji-regex@8.0.0: {}
@@ -1938,6 +2551,8 @@ snapshots:
       get-intrinsic: 1.2.4
 
   es-errors@1.3.0: {}
+
+  es6-promise@4.2.6: {}
 
   esbuild@0.21.5:
     optionalDependencies:
@@ -2070,6 +2685,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  extsprintf@1.3.0: {}
+
   fast-fifo@1.3.2: {}
 
   fast-glob@3.3.2:
@@ -2168,6 +2785,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  getpass@0.1.7:
+    dependencies:
+      assert-plus: 1.0.0
+
   glob-parent@5.1.2:
     dependencies:
       is-glob: 4.0.3
@@ -2223,6 +2844,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  http-signature@1.3.1:
+    dependencies:
+      assert-plus: 1.0.0
+      jsprim: 1.4.2
+      sshpk: 1.16.1
+
   http2-wrapper@1.0.3:
     dependencies:
       quick-lru: 5.1.1
@@ -2277,11 +2904,20 @@ snapshots:
 
   isexe@2.0.0: {}
 
+  isomorphic-fetch@3.0.0:
+    dependencies:
+      node-fetch: 2.7.0
+      whatwg-fetch: 3.6.20
+    transitivePeerDependencies:
+      - encoding
+
   js-tokens@4.0.0: {}
 
   js-yaml@4.1.0:
     dependencies:
       argparse: 2.0.1
+
+  jsbn@0.1.1: {}
 
   jsbn@1.1.0: {}
 
@@ -2289,17 +2925,48 @@ snapshots:
 
   json-parse-even-better-errors@2.3.1: {}
 
+  json-schema@0.4.0: {}
+
   jsonfile@6.1.0:
     dependencies:
       universalify: 2.0.1
     optionalDependencies:
       graceful-fs: 4.2.11
 
+  jsonwebtoken@9.0.0:
+    dependencies:
+      jws: 3.2.2
+      lodash: 4.17.21
+      ms: 2.1.3
+      semver: 7.6.3
+
+  jsprim@1.4.2:
+    dependencies:
+      assert-plus: 1.0.0
+      extsprintf: 1.3.0
+      json-schema: 0.4.0
+      verror: 1.10.0
+
+  jssha@2.4.1: {}
+
+  jwa@1.4.1:
+    dependencies:
+      buffer-equal-constant-time: 1.0.1
+      ecdsa-sig-formatter: 1.0.11
+      safe-buffer: 5.2.1
+
+  jws@3.2.2:
+    dependencies:
+      jwa: 1.4.1
+      safe-buffer: 5.2.1
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
 
   lines-and-columns@1.2.4: {}
+
+  lodash@4.17.21: {}
 
   lowercase-keys@2.0.0: {}
 
@@ -2364,6 +3031,10 @@ snapshots:
   node-addon-api@3.2.1:
     optional: true
 
+  node-fetch@2.7.0:
+    dependencies:
+      whatwg-url: 5.0.0
+
   node-gyp-build@4.8.1:
     optional: true
 
@@ -2379,6 +3050,1158 @@ snapshots:
 
   object-inspect@1.13.2: {}
 
+  oci-accessgovernancecp@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-adm@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-aianomalydetection@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-aidocument@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-ailanguage@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-aispeech@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-aivision@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-analytics@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-announcementsservice@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-apigateway@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-apmconfig@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-apmcontrolplane@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-apmsynthetics@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-apmtraces@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-appmgmtcontrol@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-artifacts@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-audit@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-autoscaling@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-bastion@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-bds@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-blockchain@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-budget@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-capacitymanagement@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-certificates@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-certificatesmanagement@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-cims@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-cloudbridge@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-cloudguard@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-cloudmigrations@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-clusterplacementgroups@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-common@2.89.4:
+    dependencies:
+      '@types/isomorphic-fetch': 0.0.35
+      '@types/jsonwebtoken': 9.0.0
+      '@types/jssha': 2.0.0
+      '@types/opossum': 4.1.1
+      '@types/sshpk': 1.10.3
+      es6-promise: 4.2.6
+      http-signature: 1.3.1
+      isomorphic-fetch: 3.0.0
+      jsonwebtoken: 9.0.0
+      jssha: 2.4.1
+      opossum: 5.0.1
+      sshpk: 1.16.1
+      uuid: 3.3.3
+    transitivePeerDependencies:
+      - encoding
+
+  oci-computecloudatcustomer@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-computeinstanceagent@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-containerengine@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-containerinstances@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-core@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-dashboardservice@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-database@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-databasemanagement@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-databasemigration@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-databasetools@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-datacatalog@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-dataflow@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-dataintegration@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-datalabelingservice@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-datalabelingservicedataplane@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-datasafe@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-datascience@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-demandsignal@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-desktops@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-devops@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-disasterrecovery@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-dns@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-dts@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-email@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-emaildataplane@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-emwarehouse@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-events@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-filestorage@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-fleetsoftwareupdate@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-functions@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-fusionapps@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-generativeai@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-generativeaiinference@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-genericartifactscontent@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-globallydistributeddatabase@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-goldengate@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-governancerulescontrolplane@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-healthchecks@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-identity@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-identitydataplane@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-identitydomains@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-integration@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-jms@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-jmsjavadownloads@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-keymanagement@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-licensemanager@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-limits@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-loadbalancer@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-lockbox@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-loganalytics@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-logging@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-loggingingestion@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-loggingsearch@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-managementagent@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-managementdashboard@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-marketplace@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-marketplaceprivateoffer@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-marketplacepublisher@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-mediaservices@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-monitoring@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-mysql@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-networkfirewall@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-networkloadbalancer@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-nosql@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-objectstorage@2.89.4:
+    dependencies:
+      await-semaphore: 0.1.3
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-oce@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-ocicontrolcenter@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-ocvp@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-oda@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-onesubscription@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-ons@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-opa@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-opensearch@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-operatoraccesscontrol@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-opsi@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-optimizer@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-osmanagement@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-osmanagementhub@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-ospgateway@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-osubbillingschedule@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-osuborganizationsubscription@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-osubsubscription@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-osubusage@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-psql@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-queue@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-recovery@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-redis@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-resourcemanager@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-resourcescheduler@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-resourcesearch@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-rover@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-sch@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-sdk@2.89.4:
+    dependencies:
+      oci-accessgovernancecp: 2.89.4
+      oci-adm: 2.89.4
+      oci-aianomalydetection: 2.89.4
+      oci-aidocument: 2.89.4
+      oci-ailanguage: 2.89.4
+      oci-aispeech: 2.89.4
+      oci-aivision: 2.89.4
+      oci-analytics: 2.89.4
+      oci-announcementsservice: 2.89.4
+      oci-apigateway: 2.89.4
+      oci-apmconfig: 2.89.4
+      oci-apmcontrolplane: 2.89.4
+      oci-apmsynthetics: 2.89.4
+      oci-apmtraces: 2.89.4
+      oci-appmgmtcontrol: 2.89.4
+      oci-artifacts: 2.89.4
+      oci-audit: 2.89.4
+      oci-autoscaling: 2.89.4
+      oci-bastion: 2.89.4
+      oci-bds: 2.89.4
+      oci-blockchain: 2.89.4
+      oci-budget: 2.89.4
+      oci-capacitymanagement: 2.89.4
+      oci-certificates: 2.89.4
+      oci-certificatesmanagement: 2.89.4
+      oci-cims: 2.89.4
+      oci-cloudbridge: 2.89.4
+      oci-cloudguard: 2.89.4
+      oci-cloudmigrations: 2.89.4
+      oci-clusterplacementgroups: 2.89.4
+      oci-common: 2.89.4
+      oci-computecloudatcustomer: 2.89.4
+      oci-computeinstanceagent: 2.89.4
+      oci-containerengine: 2.89.4
+      oci-containerinstances: 2.89.4
+      oci-core: 2.89.4
+      oci-dashboardservice: 2.89.4
+      oci-database: 2.89.4
+      oci-databasemanagement: 2.89.4
+      oci-databasemigration: 2.89.4
+      oci-databasetools: 2.89.4
+      oci-datacatalog: 2.89.4
+      oci-dataflow: 2.89.4
+      oci-dataintegration: 2.89.4
+      oci-datalabelingservice: 2.89.4
+      oci-datalabelingservicedataplane: 2.89.4
+      oci-datasafe: 2.89.4
+      oci-datascience: 2.89.4
+      oci-demandsignal: 2.89.4
+      oci-desktops: 2.89.4
+      oci-devops: 2.89.4
+      oci-disasterrecovery: 2.89.4
+      oci-dns: 2.89.4
+      oci-dts: 2.89.4
+      oci-email: 2.89.4
+      oci-emaildataplane: 2.89.4
+      oci-emwarehouse: 2.89.4
+      oci-events: 2.89.4
+      oci-filestorage: 2.89.4
+      oci-fleetsoftwareupdate: 2.89.4
+      oci-functions: 2.89.4
+      oci-fusionapps: 2.89.4
+      oci-generativeai: 2.89.4
+      oci-generativeaiinference: 2.89.4
+      oci-genericartifactscontent: 2.89.4
+      oci-globallydistributeddatabase: 2.89.4
+      oci-goldengate: 2.89.4
+      oci-governancerulescontrolplane: 2.89.4
+      oci-healthchecks: 2.89.4
+      oci-identity: 2.89.4
+      oci-identitydataplane: 2.89.4
+      oci-identitydomains: 2.89.4
+      oci-integration: 2.89.4
+      oci-jms: 2.89.4
+      oci-jmsjavadownloads: 2.89.4
+      oci-keymanagement: 2.89.4
+      oci-licensemanager: 2.89.4
+      oci-limits: 2.89.4
+      oci-loadbalancer: 2.89.4
+      oci-lockbox: 2.89.4
+      oci-loganalytics: 2.89.4
+      oci-logging: 2.89.4
+      oci-loggingingestion: 2.89.4
+      oci-loggingsearch: 2.89.4
+      oci-managementagent: 2.89.4
+      oci-managementdashboard: 2.89.4
+      oci-marketplace: 2.89.4
+      oci-marketplaceprivateoffer: 2.89.4
+      oci-marketplacepublisher: 2.89.4
+      oci-mediaservices: 2.89.4
+      oci-monitoring: 2.89.4
+      oci-mysql: 2.89.4
+      oci-networkfirewall: 2.89.4
+      oci-networkloadbalancer: 2.89.4
+      oci-nosql: 2.89.4
+      oci-objectstorage: 2.89.4
+      oci-oce: 2.89.4
+      oci-ocicontrolcenter: 2.89.4
+      oci-ocvp: 2.89.4
+      oci-oda: 2.89.4
+      oci-onesubscription: 2.89.4
+      oci-ons: 2.89.4
+      oci-opa: 2.89.4
+      oci-opensearch: 2.89.4
+      oci-operatoraccesscontrol: 2.89.4
+      oci-opsi: 2.89.4
+      oci-optimizer: 2.89.4
+      oci-osmanagement: 2.89.4
+      oci-osmanagementhub: 2.89.4
+      oci-ospgateway: 2.89.4
+      oci-osubbillingschedule: 2.89.4
+      oci-osuborganizationsubscription: 2.89.4
+      oci-osubsubscription: 2.89.4
+      oci-osubusage: 2.89.4
+      oci-psql: 2.89.4
+      oci-queue: 2.89.4
+      oci-recovery: 2.89.4
+      oci-redis: 2.89.4
+      oci-resourcemanager: 2.89.4
+      oci-resourcescheduler: 2.89.4
+      oci-resourcesearch: 2.89.4
+      oci-rover: 2.89.4
+      oci-sch: 2.89.4
+      oci-secrets: 2.89.4
+      oci-servicecatalog: 2.89.4
+      oci-servicemanagerproxy: 2.89.4
+      oci-servicemesh: 2.89.4
+      oci-stackmonitoring: 2.89.4
+      oci-streaming: 2.89.4
+      oci-tenantmanagercontrolplane: 2.89.4
+      oci-threatintelligence: 2.89.4
+      oci-usage: 2.89.4
+      oci-usageapi: 2.89.4
+      oci-vault: 2.89.4
+      oci-vbsinst: 2.89.4
+      oci-visualbuilder: 2.89.4
+      oci-vnmonitoring: 2.89.4
+      oci-vulnerabilityscanning: 2.89.4
+      oci-waa: 2.89.4
+      oci-waas: 2.89.4
+      oci-waf: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-secrets@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-servicecatalog@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-servicemanagerproxy@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-servicemesh@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-stackmonitoring@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-streaming@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-tenantmanagercontrolplane@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-threatintelligence@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-usage@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-usageapi@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-vault@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-vbsinst@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-visualbuilder@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-vnmonitoring@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-vulnerabilityscanning@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-waa@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-waas@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-waf@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+      oci-workrequests: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
+  oci-workrequests@2.89.4:
+    dependencies:
+      oci-common: 2.89.4
+    transitivePeerDependencies:
+      - encoding
+
   on-finished@2.4.1:
     dependencies:
       ee-first: 1.1.1
@@ -2390,6 +4213,8 @@ snapshots:
   onetime@5.1.2:
     dependencies:
       mimic-fn: 2.1.0
+
+  opossum@5.0.1: {}
 
   os-filter-obj@2.0.0:
     dependencies:
@@ -2653,6 +4478,18 @@ snapshots:
 
   sprintf-js@1.1.3: {}
 
+  sshpk@1.16.1:
+    dependencies:
+      asn1: 0.2.6
+      assert-plus: 1.0.0
+      bcrypt-pbkdf: 1.0.2
+      dashdash: 1.14.1
+      ecc-jsbn: 0.1.2
+      getpass: 0.1.7
+      jsbn: 0.1.1
+      safer-buffer: 2.1.2
+      tweetnacl: 0.14.5
+
   statuses@2.0.1: {}
 
   streamx@2.18.0:
@@ -2723,6 +4560,8 @@ snapshots:
       '@tokenizer/token': 0.3.0
       ieee754: 1.2.1
 
+  tr46@0.0.3: {}
+
   trim-repeated@2.0.0:
     dependencies:
       escape-string-regexp: 5.0.0
@@ -2735,6 +4574,8 @@ snapshots:
       get-tsconfig: 4.7.6
     optionalDependencies:
       fsevents: 2.3.3
+
+  tweetnacl@0.14.5: {}
 
   type-is@1.6.18:
     dependencies:
@@ -2760,7 +4601,24 @@ snapshots:
 
   utils-merge@1.0.1: {}
 
+  uuid@3.3.3: {}
+
   vary@1.1.2: {}
+
+  verror@1.10.0:
+    dependencies:
+      assert-plus: 1.0.0
+      core-util-is: 1.0.2
+      extsprintf: 1.3.0
+
+  webidl-conversions@3.0.1: {}
+
+  whatwg-fetch@3.6.20: {}
+
+  whatwg-url@5.0.0:
+    dependencies:
+      tr46: 0.0.3
+      webidl-conversions: 3.0.1
 
   which@1.3.1:
     dependencies:

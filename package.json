@@ -6,6 +6,9 @@
   "scripts": {
     "tsc": "tsc --init",
     "deploy": "pnpm run build && pnpm run start",
+    "prod": "cd deploy/production && sh ./deploy.sh && cd ../../..",
+    "bucket": "tsx ./src/bucket.ts",
+    "browser": "tsx ./src/browser.ts",
     "build": "npx swc ./src -d dist",
     "start": "node ./dist/src/index.js",
     "test": "tsx ./src/index.ts"
@@ -23,6 +26,9 @@
   },
   "dependencies": {
     "express": "^4.19.2",
+    "oci-common": "^2.89.4",
+    "oci-objectstorage": "^2.89.4",
+    "oci-sdk": "^2.89.4",
     "puppeteer": "^22.6.3"
   }
 }
