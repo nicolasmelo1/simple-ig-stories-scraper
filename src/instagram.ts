@@ -33,6 +33,9 @@ export default async function instagram(
    * Logs the user into Instagram so we can start interacting with the page.
    */
   async function login(page: Page) {
+    await page.screenshot({
+      path: 'screenshot.jpg'
+    });
     await page.type("input[name=username]", username);
     await page.type("input[name=password]", password);
 
