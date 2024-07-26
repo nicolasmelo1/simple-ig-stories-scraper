@@ -15,6 +15,10 @@ async function main() {
     res.json(stories);   
   });
 
+  app.get('/healthcheck', (_: Request, res: Response) => {
+    res.json({ status: 'ok' });
+  });
+
   app.listen(3000, () => {
     console.log("Server started at http://localhost:3000");
   });
