@@ -2,7 +2,7 @@ import puppeteer, { Page } from "puppeteer";
 import { sleep } from "./utils";
 
 const INSTAGRAM_HOST = "https://www.instagram.com/";
-
+const TOTAL_NUMBER_OF_STORIES_PER_RUN = 2;
 export default async function instagram(
   username: string,
   password: string,
@@ -132,7 +132,7 @@ export default async function instagram(
 
     let button = await getStoriesButtons();
 
-    while (extractedStories.size < 5 && button) {
+    while (extractedStories.size < TOTAL_NUMBER_OF_STORIES_PER_RUN && button) {
       const extractedStoryOnButton = new Set();
       let resolve: (value: any) => void = () => undefined
       const promise = new Promise((r) => (resolve = r));
