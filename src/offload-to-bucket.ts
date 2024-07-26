@@ -1,7 +1,7 @@
 import { streamToBuffer } from './utils';
 import { ConfigFileAuthenticationDetailsProvider } from 'oci-common'; 
 import { ObjectStorageClient, NodeFSBlob, requests } from 'oci-objectstorage';
-import { statSync, readdirSync, rmSync } from "fs";
+import { statSync, readdirSync, rmSync, existsSync, mkdirSync } from "fs";
 import internal from 'stream';
 
 const provider = new ConfigFileAuthenticationDetailsProvider('~/.oci/config', 'DEFAULT');
@@ -15,6 +15,7 @@ export function offloadToBucketClient() {
   
   async function recursivelyOffloadStoriesToBucket() {
     if (args.timeout) clearTimeout(args.timeout);
+    existsSync('./stories') || mkdirSync('./stories');
     const allFilesOnDirectory = readdirSync('./stories');
     try {
       for (const file of allFilesOnDirectory) {
