@@ -115,7 +115,10 @@ export default async function instagram(
 
     const getStoriesButtons = async () => {
       const buttons = await page.$$("button");
-
+      
+      await page.screenshot({
+        path: 'getting_the_story_button.jpg'
+      });
       for (const button of buttons) {
         const ariaLabelOfButton = await page.evaluate(
           (button) => button?.ariaLabel || "",
@@ -162,8 +165,12 @@ export default async function instagram(
           (toCloseButton) => toCloseButton.ariaLabel,
           toCloseButton
         );
+        
         if (valueOfToCloseButton === "Close") {
           console.log("Found the close button", valueOfToCloseButton);
+          await page.screenshot({
+            path: 'closing_the_button.jpg'
+          });
           await page.evaluate(
             (toCloseButton) => toCloseButton.parentElement?.parentElement?.click(),
             toCloseButton
