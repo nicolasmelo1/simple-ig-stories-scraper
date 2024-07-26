@@ -169,7 +169,7 @@ export default async function instagram(
       button = await getStoriesButtons();
     }
 
-    return extractedStories;
+    return Array.from(extractedStories);
   }
 
   async function close() {
