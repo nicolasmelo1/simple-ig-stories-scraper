@@ -96,6 +96,7 @@ export default async function instagram(
 
   async function extractStories() {
     const extractedStories = new Set();
+    const alreadyViewedStories = new Set();
     const page = await browser.newPage();
     await page.goto(INSTAGRAM_HOST);
     await page.waitForNetworkIdle();
@@ -121,8 +122,9 @@ export default async function instagram(
           button
         );
   
-        if (ariaLabelOfButton.startsWith("Story") && ariaLabelOfButton.endsWith("not seen")) {
+        if (ariaLabelOfButton.startsWith("Story") && ariaLabelOfButton.endsWith("not seen") && alreadyViewedStories.has(ariaLabelOfButton) === false) {
           console.log("Found a story button", ariaLabelOfButton);
+          alreadyViewedStories.add(ariaLabelOfButton);
           return button;
         }
       }
