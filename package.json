@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "tsc": "tsc --init",
+    "deploy": "pnpm run build && pnpm run start",
     "build": "npx swc ./src -d dist",
     "start": "node ./dist/src/index.js",
     "test": "tsx ./src/index.ts"
