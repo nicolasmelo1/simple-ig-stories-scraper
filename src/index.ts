@@ -16,6 +16,7 @@ async function main() {
   });
 
   app.get('/healthcheck', (_: Request, res: Response) => {
+    console.log('Healthcheck');
     res.json({ status: 'ok' });
   });
 
