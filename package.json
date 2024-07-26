@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "tsc": "tsc --init",
-    "deploy": "pnpm run build && pnpm run start",
+    "deploy": "pnpm run deploy && pnpm run build && pnpm run start",
     "prod": "cd deploy/production && sh ./deploy.sh && cd ../../..",
     "bucket": "tsx ./src/bucket.ts",
     "browser": "tsx ./src/browser.ts",

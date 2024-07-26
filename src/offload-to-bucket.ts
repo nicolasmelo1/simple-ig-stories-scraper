@@ -1,4 +1,4 @@
-import { streamToBlob } from './utils';
+import { streamToBuffer } from './utils';
 import { ConfigFileAuthenticationDetailsProvider } from 'oci-common'; 
 import { ObjectStorageClient, NodeFSBlob, requests } from 'oci-objectstorage';
 import { statSync, readdirSync, rmSync } from "fs";
@@ -19,8 +19,8 @@ export function offloadToBucketClient() {
     try {
       for (const file of allFilesOnDirectory) {
         const request: requests.GetNamespaceRequest = {};
-        const response = await client.getNamespace(request);
-        const namespace = response.value;
+        const namespaceResponse = await client.getNamespace(request);
+        const namespace = namespaceResponse.value;
         
         // Create read stream to file
         const stats = statSync(`./stories/${file}`);
@@ -36,7 +36,19 @@ export function offloadToBucketClient() {
           contentLength: stats.size
         };
 
-        const putObjectResponse = await client.putObject(putObjectRequest);
+        const [response, putObjectResponse] = await Promise.all([
+          fetch('http://localhost:3000/api/stories/create', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              fileName: file
+            })
+          }), 
+          client.putObject(putObjectRequest)
+        ]);
+        console.log('Response from server', await response.json());
         console.log("Put Object executed successfully", JSON.stringify(putObjectResponse, null, 2));
         rmSync(`./stories/${file}`);
       }
@@ -60,10 +72,10 @@ export function offloadToBucketClient() {
         bucketName: 'user-stories',
         objectName
       };
-
+      
       const getObjectResponse = await client.getObject(getObjectRequest);
-      const blob = await streamToBlob(getObjectResponse.value as internal.Readable);
-      return blob
+      console.log('Get object response', getObjectResponse);
+      return streamToBuffer(getObjectResponse.value);
     },
     stop: () => {
       if (args.timeout) clearTimeout(args.timeout)

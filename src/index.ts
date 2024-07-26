@@ -1,6 +1,7 @@
 import instagram from "./instagram";
 import express, { Request, Response } from "express";
 import { spawn } from "child_process";
+import { offloadToBucketClient } from "./offload-to-bucket";
 
 
 const browserChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./browser.ts']) : spawn('pnpm', ['run', 'browser']); 
@@ -25,14 +26,11 @@ bucketChild.stderr.on('data', function (data) {
 async function main() {
   const app = express();
 
-  app.get("/get-stories", async (_: Request, res: Response) => {
-    //const client = await instagram("casamentovivianeenicolas", "Vini12!@#");
-    const client = await instagram("norcpops", "Nicolas123!@#");
-
-    //await client.followTheUsersBack();
-    const stories = await client.extractStories();
-    await client.close()
-    res.json(stories);   
+  app.get("/get-stories/:fileName", async (req: Request, res: Response) => {
+    const client  = offloadToBucketClient();
+    const buffer = await client.getFromBucket(req.params.fileName);
+    
+    res.send(buffer);
   });
 
   app.get('/healthcheck', (_: Request, res: Response) => {
@@ -40,8 +38,8 @@ async function main() {
     res.json({ status: 'ok' });
   });
 
-  const server = app.listen(3000, () => {
-    console.log("Server started at http://localhost:3000");
+  const server = app.listen(3001, () => {
+    console.log("Server started at http://localhost:3001");
   });
 
   server.on('close', () => {
