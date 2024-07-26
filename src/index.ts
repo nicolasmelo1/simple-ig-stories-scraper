@@ -11,6 +11,7 @@ async function main() {
 
     //await client.followTheUsersBack();
     const stories = await client.extractStories();
+    await client.close()
     res.json(stories);   
   });
 
