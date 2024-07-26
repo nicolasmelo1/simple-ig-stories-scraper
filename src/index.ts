@@ -4,8 +4,8 @@ import { spawn } from "child_process";
 import { offloadToBucketClient } from "./offload-to-bucket";
 
 
-const browserChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./browser.ts']) : spawn('pnpm', ['run', 'browser']); 
-const bucketChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./bucket.ts']) : spawn('pnpm', ['run', 'bucket']);
+const browserChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./dist/src/browser.js']) : spawn('pnpm', ['run', 'browser']); 
+const bucketChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./dist/src/bucket.js']) : spawn('pnpm', ['run', 'bucket']);
 
 browserChild.stdout.on('data', function (data) {
   console.log(`[browser]:`, data.toString());
@@ -38,8 +38,10 @@ async function main() {
     res.json({ status: 'ok' });
   });
 
-  const server = app.listen(3001, () => {
-    console.log("Server started at http://localhost:3001");
+  const port = process.env.NODE_ENV === 'production' ? 3000 : 3001;
+  
+  const server = app.listen(port, () => {
+    console.log(`Server started at http://localhost:${port}`);
   });
 
   server.on('close', () => {

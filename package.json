@@ -10,7 +10,7 @@
     "bucket": "tsx ./src/bucket.ts",
     "browser": "tsx ./src/browser.ts",
     "build": "npx swc ./src -d dist",
-    "start": "node ./dist/src/index.js",
+    "start": "NODE_ENV=production node ./dist/src/index.js",
     "test": "tsx ./src/index.ts"
   },
   "keywords": [],
