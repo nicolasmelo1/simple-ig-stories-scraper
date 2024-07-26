@@ -17,6 +17,8 @@ export default async function instagram(
   async function initialize() {
     const browser = await puppeteer.launch({
       headless: true,
+      executablePath: "/usr/bin/chromium-browser",
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: { width: 900, height: 900 },
     });
 
@@ -182,3 +184,4 @@ export default async function instagram(
     extractStories,
   };
 }
+
