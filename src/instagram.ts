@@ -1,10 +1,12 @@
 import puppeteer, { Page } from "puppeteer";
-import { sleep } from "./utils";
+import loggingBuilder, { sleep } from "./utils";
 import { randomUUID } from 'node:crypto';
 import fs from 'fs';
 
 const INSTAGRAM_HOST = "https://www.instagram.com/";
 const TOTAL_NUMBER_OF_STORIES_PER_RUN = 10;
+const logger = loggingBuilder("instagram");
+
 export default async function instagram(
   username: string,
   password: string,
@@ -44,7 +46,7 @@ export default async function instagram(
     await page.click("button[type=submit]");
 
     await sleep(10000);
-    console.log("Logged in");
+    logger.log("Logged in");
     
     /*
     /*const handles = await page.$$("a");
@@ -53,7 +55,7 @@ export default async function instagram(
     await handles[0].click();
     console.log("Clicked on the first handle");
     await page.waitForNetworkIdle();*/
-    console.log("Logged in2");
+    logger.log("Logged in2");
 
     const buttons = await page.$$("button");
 
@@ -77,7 +79,7 @@ export default async function instagram(
         (anchor) => anchor?.textContent || "",
         anchorTag
       );
-      console.log(valueOfAnchor);
+      logger.log(valueOfAnchor);
       if (valueOfAnchor.endsWith('followers')) {
         await anchorTag.click()
         break;
@@ -98,25 +100,44 @@ export default async function instagram(
 
   async function extractStories(existingData: string[] = []) {
     try {
-      const oldExtractedStories = new Set<string>(...existingData);
       const extractedStories = new Set<string>();
       const alreadyViewedStories = new Set<string>();
       const page = await browser.newPage();
       
-      await page.goto(INSTAGRAM_HOST);
+      const pathToUse = Math.random() > 0.3 ? 'direct/inbox/' : Math.random() > 0.3 ? username : 'explore';
+      await page.goto(INSTAGRAM_HOST + pathToUse);
       await page.waitForNetworkIdle();
-
       
-      let buttons = await page.$$("button");
 
-      for (const button of buttons) {
-        const value = await page.evaluate((button) => button.textContent, button);
-        if (value === "Not Now") {
-          await button.click();
+      const closeNotNow = async () => {
+        let buttons = await page.$$("button");
+        logger.log("Found the not now buttons");
+        for (const button of buttons) {
+          const value = await page.evaluate((button) => button.textContent, button);
+          if (value === "Not Now") {
+            await button.click();
+            break;
+          }
+        }
+      }
+
+      await closeNotNow();
+
+      const anchorTags = await page.$$("a");
+      for (const anchorTag of anchorTags) {
+        const textContent = await page.evaluate(
+          (anchorTag) => anchorTag?.textContent || "",
+          anchorTag
+        );
+
+        if (textContent.endsWith('Home')) {
+          await anchorTag.click();
+          await page.waitForNetworkIdle();
           break;
         }
       }
 
+      await closeNotNow();
 
       const getStoriesButtons = async () => {
         let buttons = await page.$$("button");
@@ -131,9 +152,18 @@ export default async function instagram(
             (button) => button?.ariaLabel || "",
             button
           );
+          const textContentOfButton = await page.evaluate(
+            (button) => button?.textContent || "",
+            button
+          );
     
-          if (ariaLabelOfButton.startsWith("Story") && ariaLabelOfButton.endsWith("not seen") && alreadyViewedStories.has(ariaLabelOfButton) === false) {
-            console.log("Found a story button", ariaLabelOfButton);
+          if (
+            ariaLabelOfButton.startsWith("Story") && 
+            ariaLabelOfButton.endsWith("not seen") && 
+            textContentOfButton.startsWith("LIVE") === false &&
+            alreadyViewedStories.has(ariaLabelOfButton) === false
+          ) {
+            logger.log("Found a story button", ariaLabelOfButton);
             alreadyViewedStories.add(ariaLabelOfButton);
             return button;
           }
@@ -142,7 +172,9 @@ export default async function instagram(
 
       let button = await getStoriesButtons();
 
+      logger.log("Extracting stories");
       while (extractedStories.size < TOTAL_NUMBER_OF_STORIES_PER_RUN && button) {
+        logger.log("Extracting stories", extractedStories.size, TOTAL_NUMBER_OF_STORIES_PER_RUN);
         const extractedStoryOnButton = new Set();
         const storyUuid = randomUUID();
         /*let resolve: (value: any) => void = () => undefined
@@ -160,7 +192,7 @@ export default async function instagram(
         try {
           await button?.click(); 
         } catch (e) {
-          console.log('Could not click on the button', e);
+          logger.log('Could not click on the button', e);
         }
         //setTimeout(resolve, 5000);
         await page.waitForNetworkIdle({
@@ -182,6 +214,7 @@ export default async function instagram(
         //console.log("Extracted story", Array.from(extractedStoryOnButton)[0]);
         //extractedStories.add(Array.from(extractedStoryOnButton)[0] as string);
 
+        logger.log("Extracted stories", extractedStories.size, TOTAL_NUMBER_OF_STORIES_PER_RUN);
         const toCloseButtons = await page.$$("svg");
         for (const toCloseButton of toCloseButtons) {
           const valueOfToCloseButton = await page.evaluate(
@@ -191,7 +224,7 @@ export default async function instagram(
           
           if (valueOfToCloseButton === "Close") {
             await sleep(2000);
-            console.log("Found the close button", valueOfToCloseButton);
+            logger.log("Found the close button", valueOfToCloseButton);
             await page.screenshot({
               path: 'closing_the_button.jpg'
             });
@@ -209,17 +242,17 @@ export default async function instagram(
       await page.close();
       return Array.from(extractedStories).filter((story) => typeof story === 'string');
     } catch (e) {
-      console.log('Error getting stories', e);
+      logger.log('Error getting stories', e);
       try {
         await browser.close();
       } catch (e) {
-        console.log('Error closing the browser', e);
+        logger.log('Error closing the browser', e);
       }
 
       const [newPage, newBrowser] = await initialize();
       browser = newBrowser;
       await login(newPage);
-      return extractStories(existingData); 
+      return [];
     }
   }
 

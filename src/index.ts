@@ -1,4 +1,3 @@
-import instagram from "./instagram";
 import express, { Request, Response } from "express";
 import { spawn } from "child_process";
 import { offloadToBucketClient } from "./offload-to-bucket";

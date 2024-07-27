@@ -1,12 +1,12 @@
-import { streamToBuffer } from './utils';
+import loggingBuilder, { streamToBuffer } from './utils';
 import { ConfigFileAuthenticationDetailsProvider } from 'oci-common'; 
 import { ObjectStorageClient, NodeFSBlob, requests } from 'oci-objectstorage';
 import { statSync, readdirSync, rmSync, existsSync, mkdirSync } from "fs";
-import internal from 'stream';
 
 const provider = new ConfigFileAuthenticationDetailsProvider('~/.oci/config', 'DEFAULT');
 const client = new ObjectStorageClient({ authenticationDetailsProvider: provider });
-
+const logger = loggingBuilder("bucket");
+const FRONT_END_HOST = process.env.NODE_ENV === 'production' ? 'https://www.vivianeenicolas.com.br' : 'http://localhost:3000';
 
 export function offloadToBucketClient() {
   const args: {
@@ -28,7 +28,7 @@ export function offloadToBucketClient() {
         const nodeFsBlob = new NodeFSBlob(`./stories/${file}`, stats.size);
         const objectData = await nodeFsBlob.getData();
 
-        console.log("Bucket is created. Now adding object to the Bucket.");
+        logger.log("Bucket is created. Now adding object to the Bucket.");
         const putObjectRequest: requests.PutObjectRequest = {
           namespaceName: namespace,
           bucketName: 'user-stories',
@@ -38,7 +38,7 @@ export function offloadToBucketClient() {
         };
 
         const [response, putObjectResponse] = await Promise.all([
-          fetch('http://localhost:3000/api/stories/create', {
+          fetch(`${FRONT_END_HOST}/api/stories/create`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -49,8 +49,8 @@ export function offloadToBucketClient() {
           }), 
           client.putObject(putObjectRequest)
         ]);
-        console.log('Response from server', await response.json());
-        console.log("Put Object executed successfully", JSON.stringify(putObjectResponse, null, 2));
+        logger.log('Response from server', await response.json());
+        logger.log("Put Object executed successfully", JSON.stringify(putObjectResponse, null, 2));
         rmSync(`./stories/${file}`);
       }
       const timeout = setTimeout(() => recursivelyOffloadStoriesToBucket(), 20000);
@@ -75,7 +75,7 @@ export function offloadToBucketClient() {
       };
       
       const getObjectResponse = await client.getObject(getObjectRequest);
-      console.log('Get object response', getObjectResponse);
+      logger.log('Get object response', getObjectResponse);
       return streamToBuffer(getObjectResponse.value);
     },
     stop: () => {
