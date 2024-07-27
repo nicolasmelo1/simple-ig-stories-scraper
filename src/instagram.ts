@@ -20,7 +20,7 @@ export default async function instagram(
    */
   async function initialize() {
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: { width: 900, height: 900 },
     });
