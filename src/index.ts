@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { spawn } from "child_process";
 import { offloadToBucketClient } from "./offload-to-bucket";
-
+import cors from "cors";
 
 const browserChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./dist/src/browser.js']) : spawn('pnpm', ['run', 'browser']); 
 const bucketChild = process.env.NODE_ENV === 'production' ? spawn('node', ['./dist/src/bucket.js']) : spawn('pnpm', ['run', 'bucket']);
@@ -25,6 +25,7 @@ bucketChild.stderr.on('data', function (data) {
 async function main() {
   const app = express();
 
+  app.use(cors());
   app.get("/get-stories/:fileName", async (req: Request, res: Response) => {
     const client  = offloadToBucketClient();
     const buffer = await client.getFromBucket(req.params.fileName);
