@@ -20,7 +20,7 @@ export default async function instagram(
    */
   async function initialize() {
     const browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
       defaultViewport: { width: 900, height: 900 },
     });
@@ -80,13 +80,19 @@ export default async function instagram(
         anchorTag
       );
       logger.log(valueOfAnchor);
+      await sleep(Math.random() * 10000)
+
       if (valueOfAnchor.endsWith('followers')) {
         await anchorTag.click()
         break;
       }
+      await sleep(Math.random() * 10000)
+
     }
 
+
     await page.waitForNetworkIdle();
+    await sleep(Math.random() * 10000)
     const buttons = await page.$$("button");
     for (const button of buttons) {
       const valueOfButton = await page.evaluate(
@@ -94,7 +100,15 @@ export default async function instagram(
         button
       );
 
-      if (valueOfButton === "·") await button.click();
+      if (valueOfButton === "·") {
+        await sleep(Math.random() * 10000)
+        await button.click();
+      }
+    }
+    try {
+      await page.close()
+    } catch (e) {
+      logger.log('Error closing the page', e);
     }
   }
 
@@ -174,7 +188,7 @@ export default async function instagram(
 
       logger.log("Extracting stories");
       while (extractedStories.size < TOTAL_NUMBER_OF_STORIES_PER_RUN && button) {
-        logger.log("Extracting stories", extractedStories.size, TOTAL_NUMBER_OF_STORIES_PER_RUN);
+        logger.log("Extracting stories", extractedStories.size);
         const extractedStoryOnButton = new Set();
         const storyUuid = randomUUID();
         /*let resolve: (value: any) => void = () => undefined
@@ -195,9 +209,7 @@ export default async function instagram(
           logger.log('Could not click on the button', e);
         }
         //setTimeout(resolve, 5000);
-        await page.waitForNetworkIdle({
-          idleTime: 2000
-        });
+        await sleep(3000);
         fs.existsSync('./stories') || fs.mkdirSync('./stories');
         await page.screenshot({
           path: `./stories/${storyUuid}.jpg`,
