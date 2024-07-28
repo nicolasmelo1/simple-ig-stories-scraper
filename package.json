@@ -31,6 +31,8 @@
     "oci-common": "^2.89.4",
     "oci-objectstorage": "^2.89.4",
     "oci-sdk": "^2.89.4",
-    "puppeteer": "^22.6.3"
+    "puppeteer": "^22.6.3",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   }
 }

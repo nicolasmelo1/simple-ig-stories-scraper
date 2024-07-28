@@ -1,7 +1,12 @@
-import puppeteer, { Page } from "puppeteer";
+import { Page } from "puppeteer";
 import loggingBuilder, { sleep } from "./utils";
 import { randomUUID } from 'node:crypto';
 import fs from 'fs';
+import puppeteer from 'puppeteer-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
+
+// add stealth plugin and use defaults (all evasion techniques)
+puppeteer.use(StealthPlugin())
 
 const INSTAGRAM_HOST = "https://www.instagram.com/";
 const TOTAL_NUMBER_OF_STORIES_PER_RUN = 10;
